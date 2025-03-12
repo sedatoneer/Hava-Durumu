@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu</title>
+    <link href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Hava Durumu</h1>
+            <div class="search-bar">
+                <input type="text" id="city_input" placeholder="Şehir ara...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <button id="locationBtn"><i class="bx bx-target-lock"></i></button>
+            </div>
+        </header>
+        <main class="weather-dashboard">
+            <section class="current-weather">
+                <div class="card">
+                    <h2 class="city-name">______</h2>
+                    <div class="weather-main">
+                        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="" class="weather-icon">
+                        <div class="temp-info">
+                            <p class="temp">___°C</p>
+                            <p class="description">_____</p>
+                        </div>
+                    </div>
+                    <div class="weather-meta">
+                        <p><i class="fa light fa-calendar"></i> <span class="date">______</span></p>
+                    </div>
+                    <div class="forecast-section">
+                        <h3>5 Günlük Tahmin</h3>
+                        <div class="forecast-grid"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="weather-details">
+                <div class="card highlights">
+                    <h3>Detaylar</h3>
+                    <div class="highlight-grid">
+                        <div class="highlight-item">
+                            <i class="fa-light fa-droplet"></i>
+                            <p>Nem</p>
+                            <span id="humidity">___%</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-light fa-compass"></i>
+                            <p>Basınç</p>
+                            <span id="pressure">___ hPa</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-light fa-eye"></i>
+                            <p>Görüş</p>
+                            <span id="visibility">___ km</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-light fa-location-arrow"></i>
+                            <p>Rüzgar</p>
+                            <span id="wind">___ m/s</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-light fa-temperature-list"></i>
+                            <p>Hissedilen</p>
+                            <span id="feels-like">___°C</span>
+                        </div>
+                        <div class="highlight-item sun-times">
+                            <i class="fa-light fa-sunrise"></i>
+                            <p>Gündoğumu</p>
+                            <span id="sunrise">___</span>
+                        </div>
+                        <div class="highlight-item sun-times">
+                            <i class="fa-light fa-sunset"></i>
+                            <p>Günbatımı</p>
+                            <span id="sunset">___</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card air-quality">
+                    <h3>Hava Kalitesi</h3>
+                    <p class="air-index aqi-1">Mangal yapılır</p>
+                    <div class="air-grid">
+                        <div class="air-item">
+                            <p>PM2.5</p>
+                            <span id="pm25">___</span>
+                        </div>
+                        <div class="air-item">
+                            <p>PM10</p>
+                            <span id="pm10">___</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card hourly">
+                    <h3>Saatlik Tahmin</h3>
+                    <div class="hourly-grid"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
